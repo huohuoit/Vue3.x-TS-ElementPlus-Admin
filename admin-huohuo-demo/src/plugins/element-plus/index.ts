@@ -1,8 +1,18 @@
-import { App } from 'vue'
+import { App } from 'vue';
 import "element-plus/packages/theme-chalk/src/base.scss";
-import { ElButton } from 'element-plus'
+import {
+    ElButton,
+    ElInput,
+    ElForm,
+    ElFormItem,
+} from "element-plus";
 
-const components = [ElButton];
+const components = [
+    ElButton,
+    ElInput,
+    ElForm,
+    ElFormItem,
+];
 const plugins = [];
 
 export function useElementPlus(app: App) {

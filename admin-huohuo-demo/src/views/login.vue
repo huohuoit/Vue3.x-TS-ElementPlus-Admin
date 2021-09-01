@@ -1,6 +1,7 @@
 <template>
     <div>
         Huohuo is logining...
+        <el-button>click me !!!</el-button>
     </div>
 </template>
 
@@ -9,5 +10,4 @@
 </script>
 
 <style>
-
 </style>

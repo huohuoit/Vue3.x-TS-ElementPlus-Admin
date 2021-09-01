@@ -5,7 +5,7 @@
         <main>main</main>
         <article>article</article>
         <footer>footer</footer>
-        <ElButton @click="toLogin">click me</ElButton>
+        <el-button @click="toLogin">click me</el-button>
     </div>
 </template>
 
@@ -16,7 +16,6 @@ const router = useRouter();
 
 const toLogin = (): void => {
     console.log('aaaaaaaaaaaas');
-
     router.push("/login");
 }
 
