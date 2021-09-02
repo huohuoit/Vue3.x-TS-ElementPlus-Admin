@@ -1,26 +1,22 @@
 <template>
-    <div>
-        <header>header</header>
-        <aside>aside</aside>
-        <main>main</main>
-        <article>article</article>
-        <footer>footer</footer>
-        <el-button @click="toLogin">click me</el-button>
-    </div>
+  <div>
+    <header>header</header>
+    <aside>aside</aside>
+    <main>main</main>
+    <article>article</article>
+    <footer>footer</footer>
+    <el-button @click="toLogin">click me</el-button>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { useRouter } from "vue-router";
+  import { useRouter } from 'vue-router';
 
-const router = useRouter();
+  const router = useRouter();
 
-const toLogin = (): void => {
-    console.log('aaaaaaaaaaaas');
-    router.push("/login");
-}
-
+  const toLogin = (): void => {
+    router.push('/login');
+  };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

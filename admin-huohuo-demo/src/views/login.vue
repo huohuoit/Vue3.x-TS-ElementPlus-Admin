@@ -1,13 +1,10 @@
 <template>
-    <div>
-        Huohuo is logining...
-        <el-button>click me !!!</el-button>
-    </div>
+  <div>
+    Huohuo is logining...
+    <el-button>click me !!!</el-button>
+  </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup></script>
 
-</script>
-
-<style>
-</style>
+<style></style>
