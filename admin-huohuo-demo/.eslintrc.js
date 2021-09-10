@@ -74,6 +74,8 @@ module.exports = {
         svg: 'always',
         math: 'always'
       }
-    ]
+    ],
+    'no-multi-str': 1,
+      'jslint es5': true
   }
 };
