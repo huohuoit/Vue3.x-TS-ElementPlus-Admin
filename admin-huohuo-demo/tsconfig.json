@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "esnext", // 生成目标, 一般选择新版 ES，因为不是客户端环境，没必要还编译成  ES5
+    "module": "esnext", // 模块系统
     "strict": false,
     "jsx": "preserve",
     "importHelpers": true,
@@ -12,18 +12,22 @@
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true, // 防止在switch代码块里的两个case之间忘记添加break语句
+    "allowUnreachableCode": false, // 禁用执行不到的代码
+    "allowUnusedLabels": false, // 禁用执行不到的标签
+    // "noImplicitAny": true, // 如果你不想让TypeScript将没有明确指定的类型默默地推断为any类型
     "sourceMap": true,
     "baseUrl": ".",
-    "allowJs": true,
+    "allowJs": true, // 接受 JS 作为输入
     "resolveJsonModule": true, // 包含导入的模块、json的扩展
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "esnext"], // 按需选择的 lib
     "incremental": true,
     "paths": {
       "/@/*": ["src/*"],
       "/#/*": ["types/*"]
     },
-    "types": ["node", "vite/client"],
-    "typeRoots": ["./node_modules/@types/", "./types"]
+    "types": ["node", "vite/client"], // 库搜索路径下, 仅使用哪些库
+    "typeRoots": ["./node_modules/@types/", "./types"] // 指定库的搜索路径
   },
   "include": [
     "src/**/*.ts",
