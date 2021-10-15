@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import useElementPlus from '../src/plugins/element-plus';
+import { useElementPlus } from '../src/plugins/element-plus';
 
 // 导入公共样式
 import './style/index.scss';

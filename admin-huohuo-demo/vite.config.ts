@@ -4,7 +4,7 @@ import { resolve } from 'path'; // 如果编辑器提示 path 模块找不到，
 
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import styleImport from 'vite-plugin-style-import';
-import VitePluginElementPlus from 'vite-plugin-element-plus'; // 按需加载插件
+import ElementPlus from "unplugin-element-plus/vite"; // 该方式 + 手动按需导入，包体积较小。（官方方式体积大且有 Bug）
 
 
 // import  createProxy  from "./build/proxy";
@@ -28,24 +28,9 @@ export default (): UserConfigExport => {
       vue(),
       vueJsx(),
       styleImport({
-        libs: [
-          // 按需加载element-plus
-          // {
-          //   libraryName: 'element-plus',
-          //   esModule: true,
-          //   ensureStyleFile: true,
-          //   resolveStyle: (name) => {
-          //     name = name.slice(3)
-          //     return `element-plus/packages/theme-chalk/src/${name}.scss`;
-          //   },
-          //   resolveComponent: (name) => {
-          //     return `element-plus/lib/${name}`;
-          //   },
-          // },
-        ]
+        libs: []
       }),
-      // 按需加载element-plus 官方改进版
-      VitePluginElementPlus({ useSource: true }) // useSource 为 true 时，使用 [component name].scss 源文件
+      ElementPlus({}),
     ],
     resolve: {
       alias

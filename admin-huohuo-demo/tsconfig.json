@@ -26,7 +26,7 @@
       "/@/*": ["src/*"],
       "/#/*": ["types/*"]
     },
-    "types": ["node", "vite/client"], // 库搜索路径下, 仅使用哪些库
+    "types": ["node", "vite/client",  "element-plus/global"], // 库搜索路径下, 仅使用哪些库 ( "element-plus/global" 是因为使用了 Volar ，需要添加全局组件类型定义)
     "typeRoots": ["./node_modules/@types/", "./types"] // 指定库的搜索路径
   },
   "include": [
